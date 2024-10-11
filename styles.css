@@ -1,0 +1,375 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #dcdcdc;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    color: #f0f0f0;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+	text-shadow: 2px 2px 5px rgba(29, 185, 84, 0.7), /* Sombra más clara */
+                 4px 4px 10px rgba(0, 128, 0, 0.5); /* Sombra más oscura */
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
+    color: #f0f0f0;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+	text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3), /* Sombra */
+                 4px 4px 10px rgba(255, 255, 255, 0.2); /* Sombra */
+}
+
+a {
+    text-decoration: none;
+    color: #1db954;
+}
+
+a:hover {
+    color: #1db954;
+}
+
+header {
+    background-color: #2e2e2e;
+    padding-top: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.menu-box {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #4a4a4a;
+    border-bottom: 5px solid #1db954;
+    width: 100%; /* Ancho completo */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alinear los elementos del menú en una fila */
+    justify-content: center; /* Centrar el menú */
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative; /* Necesario para el submenú */
+}
+
+nav ul li a {
+    font-size: 1.0em;
+    color: #f0f0f0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1db954;
+}
+
+nav ul li .submenu {
+    display: none; /* El submenú está oculto por defecto */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%); /* Para centrar el submenú debajo del "Inicio" */
+    margin-top: 1px;
+    background-color: #3a3a3a;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centrar el contenido del submenú */
+    min-width: 120px; /* Ancho mínimo del submenú */
+}
+
+nav ul li .submenu li {
+    display: block; /* Elementos del submenú en bloques verticales */
+    margin: 0;
+}
+
+nav ul li .submenu li a {
+    display: block; /* Asegura que el área del enlace cubra todo el `li` */
+    padding: 10px;
+    color: #f0f0f0;
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+
+/* Cambia el fondo al pasar el ratón por encima */
+nav ul li .submenu li a:hover {
+    background-color: #1db954; 
+}
+
+/* Muestra el submenú al pasar el ratón por encima */
+nav ul li:hover .submenu {
+    display: block;
+}
+
+section {
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 900px;
+    background-color: #303030;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    font-size: 2em;
+    color: #1db954;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+ul {
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    color: #b0b0b0;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #444; /* Bordes grisáceos */
+}
+
+th {
+    background-color: #1db954;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+td {
+    font-size: 1em;
+    color: #c0c0c0;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #1db954;
+    color: #fff;
+    padding: 16px 30px;
+    border-radius: 30px;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    margin-left: auto; /* Alinea a la izquierda */
+    margin-right: auto; /* Alinea a la derecha */
+}
+
+.cta-button:hover {
+    background-color: #000000;
+    color: #1db954;
+    transform: translateY(-3px);
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #2e2e2e;
+    color: #b0b0b0;
+    font-size: 0.9em;
+    border-top: 1px solid #444;
+}
+
+footer p {
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+input, select, button {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #3a3a3a; 
+    color: #f5f5f5;
+    font-size: 1em;
+}
+
+input:focus, select:focus {
+    border-color: #1db954;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #1db954;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #000000;
+    transform: translateY(-3px);
+}
+
+/* Para que se adapte a diferentes pantallas */
+@media (max-width: 768px) {
+    section {
+        padding: 30px;
+        margin: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+}
+
+.radio-container {
+    display: flex; /* Hace que los elementos se alineen en una fila */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    margin-bottom: 20px;
+}
+
+.radio-container input {
+    margin-right: 12.5px;
+}
+
+.radio-container label {
+    margin-right: 30px;
+}
+
+.razasimg{
+    display: block; /* Cambia la imagen a un bloque */
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 100%; /* Asegura que las imágenes no se salgan del contenedor */
+    height: auto; /* Mantiene las proporciones originales */
+    margin-top: 20px; 
+	border-radius: 10px;
+    box-shadow:  0 0 20px rgba(197, 255, 161, 0.882);
+}
+
+.caracimg{
+    display: block; /* Cambia la imagen a un bloque */
+    margin-left: auto;
+    margin-right: auto; 
+    max-width: 100%; /* Asegura que las imágenes no se salgan del contenedor */
+    height: auto; /* Mantiene las proporciones originales */
+    margin-top: 20px;
+	border-radius: 10px;
+}
+
+.checkbox-container {
+    display: flex; /* Alinea el checkbox y la etiqueta en una fila */
+    align-items: center; /* Alinea verticalmente al centro */
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+textarea {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #444; 
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #3a3a3a; 
+    color: #f5f5f5;
+    font-size: 1em;
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+textarea:focus {
+    border-color: #1db954;
+    outline: none; /* Elimina el contorno por defecto */
+}
+
+fieldset {
+    border: 2px solid #1db954;
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #303030;
+}
+
+legend {
+    font-size: 1.5em;
+    color: #8ae58a;
+    padding: 0 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+.cta-button-register {
+    display: inline-block;
+    background-color: #1db954;
+    color: #fff;
+    padding: 16px;
+    border-radius: 30px; /* Bordes redondeados */
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center; /* Alineación del texto */
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+
+
+.cta-button-register:hover {
+    background-color: #000000; /* Color de fondo al pasar el ratón */
+    color: #1db954; /* Cambia el color del texto a verde al pasar el ratón */
+    transform: translateY(-3px); 
+}
+
+.fieldtext {
+    width: 825px; 
+}
